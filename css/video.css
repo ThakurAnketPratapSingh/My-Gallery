@@ -1,0 +1,41 @@
+/* Desktop layout */
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper {
+  margin: 20px;
+  text-align: center;
+}
+
+.video-wrapper video {
+  border: 5px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.video-wrapper h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .video-gallery {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .video-wrapper {
+    margin: 10px 0;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: auto;
+  }
+}

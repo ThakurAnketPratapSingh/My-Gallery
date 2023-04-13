@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/video.css">
 	<link rel="stylesheet" href="css/dropdownMenuBar.css">
 </head>
 <body>
@@ -42,38 +43,37 @@
 	<section class="gallery" id="photos">
 		<div class="container">
 			<h2>Videos</h2>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<a href="images/a.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/a.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="images/b.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/b.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="images/c.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/c.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="images/d.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/d.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="images/a.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/a.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="images/b.jpg" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/b.jpg" class="img-fluid">
-					</a>
-				</div>
+			<div class="video-gallery">
+			  <div class="video-wrapper">
+				<video width="640" height="360" controls>
+				  <source src="videos/a.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>
+				<h3>Video 1</h3>
+			  </div>
+			  <div class="video-wrapper">
+				<video width="640" height="360" controls>
+				  <source src="videos/b.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>
+				<h3>Video 2</h3>
+			  </div>
+			  <div class="video-wrapper">
+				<video width="640" height="360" controls>
+				  <source src="videos/c.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>
+				<h3>Video 3</h3>
+			  </div>
+			  <div class="video-wrapper">
+				<video width="640" height="360" controls>
+				  <source src="videos/d.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>
+				<h3>Video 4</h3>
+			  </div>
 			</div>
+
 		</div>
 	</section>
 
@@ -88,25 +88,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-	<script>
-		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-			event.preventDefault();
-			$(this).ekkoLightbox();
-		});
-		
-		// Add a class of 'dropdown' to the li that contains a dropdown menu
-		var dropdowns = document.querySelectorAll('.dropdown');
-
-		// Loop through the dropdowns and add event listeners to show/hide the dropdown menus
-		for (var i = 0; i < dropdowns.length; i++) {
-		  dropdowns[i].addEventListener('mouseenter', function() {
-			this.querySelector('.dropdown-menu').style.display = 'block';
-		  });
-		  
-		  dropdowns[i].addEventListener('mouseleave', function() {
-			this.querySelector('.dropdown-menu').style.display = 'none';
-		  });
-		}
-	</script>
 </body>
 </html>
