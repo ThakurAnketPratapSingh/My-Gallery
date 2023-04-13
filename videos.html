@@ -16,13 +16,13 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link" href="index.html">Home</a>
 				</li>
 				<li class="dropdown">
 				  <a class="nav-link"href="#">Gallery</a>
 				  <ul class="dropdown-menu bg-dark">
 					<li class="nav-item">
-						<a class="nav-link" href="#photos">Photos</a>
+						<a class="nav-link" href="photo.html">Photos</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#videos">Videos</a>
@@ -39,81 +39,37 @@
 		</div>
 	</nav>
 
-	<header>
-		<div class="container text-center">
-			<h1>Welcome to My Gallery</h1>
-			<p>Explore the beauty of art through our collection</p>
-		</div>
-	</header>
-
 	<section class="gallery" id="photos">
-		<div class="container">
-			<h2>Photos</h2>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/a.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/b.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/c.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/d.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/a.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<a href="photo.html" data-toggle="lightbox" data-gallery="gallery">
-						<img src="images/b.jpg" class="img-fluid">
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="gallery" id="videos">
 		<div class="container">
 			<h2>Videos</h2>
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/a.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/a.jpg" class="img-fluid">
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/b.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/b.jpg" class="img-fluid">
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/c.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/c.jpg" class="img-fluid">
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/d.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/d.jpg" class="img-fluid">
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/a.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/a.jpg" class="img-fluid">
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<a href="videos.html" data-toggle="lightbox" data-gallery="gallery">
+					<a href="images/b.jpg" data-toggle="lightbox" data-gallery="gallery">
 						<img src="images/b.jpg" class="img-fluid">
 					</a>
 				</div>
@@ -133,6 +89,11 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 	<script>
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+			event.preventDefault();
+			$(this).ekkoLightbox();
+		});
+		
 		// Add a class of 'dropdown' to the li that contains a dropdown menu
 		var dropdowns = document.querySelectorAll('.dropdown');
 
